@@ -1,23 +1,26 @@
-4.4
+4.5
 
 """
-Write a game where the computer draws a random integer between 1 and 10.
-The user tries to guess the number until they guess the right number.
-After each guess the program prints out a text: Too high, Too low or Correct.
-Notice that the computer must not change the number between guesses.
+Write a program that asks the user for a username and password.
+If either or both are incorrect, the program ask the user to enter
+the username and password again. This continues until the login
+information is correct or wrong credentials have been entered five times.
+If the information is correct, the program prints out Welcome.
+After five failed attempts the program prints out Access denied.
+The correct username is python and password rules.
 """
 
-import random
-number = random.randint(1,10)
+rounds = 0
 
 while True:
-    guess = int(input("Give your guess integer: "))
+    username = input("Please enter username: ")
+    password = input("Please enter password: ")
+    rounds = rounds + 1
 
-    if guess > number:
-        print("Too high")
-    elif guess < number:
-        print("Too low")
-    else:
-        print("Correct")
+    if username == "python" and password == "rules" :
+        print("Welcome")
+        break
+    elif rounds > 5:
+        print("Access denied")
         break
 
