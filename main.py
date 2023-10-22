@@ -1,8 +1,17 @@
-n = 1
+# Exercise 4.2
 
-while n <= 1000:
-    if n % 3 == 0:
-        print(n)
+"""
+Write a program that converts inches to centimeters until the user inputs a
+negative value. Then the program ends.
+"""
 
-    n += 1
+while True:
+    inches = float(input("Enter inches: "))
+
+    if inches > 0:
+        centimeters = inches * 2.54
+        print(f"{inches} inches is {centimeters:.2f} centimeters")
+    else:
+        print("Negative values, Program ends")
+        break
 
