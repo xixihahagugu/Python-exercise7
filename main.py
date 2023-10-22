@@ -1,6 +1,24 @@
-# 7.1
-month_of_the_year=("spring","spring","spring","summer","summer","summer","autumn","autumn","autumn","winter","winter","winter",)
-month_number=int(input("Enter the month number(1-12):"))
-x=month_of_the_year[month_number-1]
-print(f"month number {month_number} is {x}.")
+# 7.2
+
+names = set()
+
+names_input = input("Enter your name(or an empty string to quit):")
+
+while names_input != "":
+
+    if names_input in names:
+
+        print("Existing name")
+
+    if names_input not in names:
+
+        print("New name")
+
+names.add(names_input)
+names_input = input("Enter your name(or an empty string to quit):")
+while names_input == "":
+    break
+
+
+
 
