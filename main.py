@@ -1,15 +1,20 @@
+# Exercises Module 5.1
+
 import random
-import math
-N = int(input("How many random points to generate? "))
-n=0
-i=0
-while i < N:
-    x = random.uniform(-1.0,1.0)
-    y = random.uniform(-1.0,1.0)
 
-    if x**2 + y**2 < 1.0:
-        n = n + 1
+def rolldices():
 
-    i = i + 1
-pi = 4.0*n/N
-print(f"Pi is {pi}, error{math.pi - pi}")
+    num_dices = int(input("How many dices do you want to run? "))
+
+    total = 0
+
+    for dice in range(num_dices):
+
+        roll = random.randint(1, 6)
+        total += roll
+
+    # Prints out the sum of the numbers
+    print(f"Total numbers of the dice rolls are {total} ")
+
+
+rolldices()
