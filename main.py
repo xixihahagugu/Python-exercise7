@@ -1,25 +1,33 @@
-# 7.2
+choose=input("Choose an option:Enter a new airport,Fetch the information of an existing airport or Quit:")
+airport_dictionary={}
+airport_dictionary["EBAW"]="Antwerp InternationalAirport"
+airport_dictionary["EKBI"]="Billund Airport"
+airport_dictionary["EFHK"]="Helsinki-Vantaa Airport"
+airport_dictionary["EPBC"]="Warszawa-Babice Airport"
 
-names = set()
+while choose=="Enter a new airport":
 
-names_input = input("Enter your name(or an empty string to quit):")
+    new_ICA0_code=input("Enter the ICA0 code:")
 
-while names_input != "":
+    new_airport_name=input("Enter airport name:")
 
-    if names_input in names:
+    airport_dictionary[new_ICA0_code]=new_airport_name
 
-        print("Existing name")
-
-    if names_input not in names:
-
-        print("New name")
-
-names.add(names_input)
-names_input = input("Enter your name(or an empty string to quit):")
-while names_input == "":
+    print(airport_dictionary)
     break
 
-print(names)
+choose =input("Choose an option:Enter a new airport,Fetch the information of an existing airport or Quit:")
+while choose=="Fetch the information":
+    ICA0_code=input("enter the ICA0 code:")
+    if ICA0_code in airport_dictionary:
+        print(f"{ICA0_code}is the {airport_dictionary[ICA0_code]}")
+choose =input("Choose an option:Enter a newairport,Fetch the information of an existingairport or Quit:")
+while choose=="Quit":
+    break
+choose =input("Choose an option:Enter a new airport,Fetch the information of an existing airport or Quit:")
+
+
+
 
 
 
