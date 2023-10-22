@@ -1,26 +1,15 @@
-4.5
+import random
+import math
+N = int(input("How many random points to generate? "))
+n=0
+i=0
+while i < N:
+    x = random.uniform(-1.0,1.0)
+    y = random.uniform(-1.0,1.0)
 
-"""
-Write a program that asks the user for a username and password.
-If either or both are incorrect, the program ask the user to enter
-the username and password again. This continues until the login
-information is correct or wrong credentials have been entered five times.
-If the information is correct, the program prints out Welcome.
-After five failed attempts the program prints out Access denied.
-The correct username is python and password rules.
-"""
+    if x**2 + y**2 < 1.0:
+        n = n + 1
 
-rounds = 0
-
-while True:
-    username = input("Please enter username: ")
-    password = input("Please enter password: ")
-    rounds = rounds + 1
-
-    if username == "python" and password == "rules" :
-        print("Welcome")
-        break
-    elif rounds > 5:
-        print("Access denied")
-        break
-
+    i = i + 1
+pi = 4.0*n/N
+print(f"Pi is {pi}, error{math.pi - pi}")
