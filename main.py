@@ -1,29 +1,14 @@
-gender =input("Enter your biological gender:")
-while gender =="Female":
-    value =int(input("Enter your hemoglobin value(g/l):"))
-
-    if value<117:
-        print("The hemoglobin value is low")
-        break
-
-    elif value>155:
-        print("The hemoglobin value is high")
-        break
+year =input("enter a year:")
+x =int(year)
+if x%100 ==0:
+    if x%400 ==0:
+        print("The year is leap")
 
     else:
-        print("The hemoglobin value is normal")
-        break
-while gender =="Male":
-    value =int(input("Enter your hemoglobin value(g/l):"))
-
-    if value<134:
-        print("The hemoglobin value is low")
-        break
-
-    elif value>167:
-        print("The hemoglobin value is high")
-        break
-
+        print("The year is not leap")
+if x%100 !=0:
+    if x%4 ==0:
+            print("The year is leap")
     else:
-        print("The hemoglobin value is normal")
-        break
+        print("The year is not leap")
+
