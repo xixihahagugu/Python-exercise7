@@ -1,29 +1,23 @@
+4.4
+
 """
-Write a program that asks the user to enter numbers until they
-enter an empty string to quit. Finally, the program prints out
-the smallest and largest number from the numbers it received.
+Write a game where the computer draws a random integer between 1 and 10.
+The user tries to guess the number until they guess the right number.
+After each guess the program prints out a text: Too high, Too low or Correct.
+Notice that the computer must not change the number between guesses.
 """
 
-
-smallest = None
-largest = None
+import random
+number = random.randint(1,10)
 
 while True:
+    guess = int(input("Give your guess integer: "))
 
-    user = input("Enter a number (or press Enter to quit): ")
-
-    if user == "":
+    if guess > number:
+        print("Too high")
+    elif guess < number:
+        print("Too low")
+    else:
+        print("Correct")
         break
-
-    try:
-        number = float(user)
-
-        if smallest is None or number < smallest:
-            smallest = number
-        if largest is None or number > largest:
-            largest = number
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
-
-print(f"The smallest number you received is {smallest} and the largest one is {largest}")
 
