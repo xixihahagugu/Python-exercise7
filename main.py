@@ -1,4 +1,29 @@
-length = float(input("Enter the length of a zander (in cm)"))
-if length < 42:
-    x = 42-length
-    print(f"Release the fish back into the lake,below the size limit the caught fish was {x}")
+gender =input("Enter your biological gender:")
+while gender =="Female":
+    value =int(input("Enter your hemoglobin value(g/l):"))
+
+    if value<117:
+        print("The hemoglobin value is low")
+        break
+
+    elif value>155:
+        print("The hemoglobin value is high")
+        break
+
+    else:
+        print("The hemoglobin value is normal")
+        break
+while gender =="Male":
+    value =int(input("Enter your hemoglobin value(g/l):"))
+
+    if value<134:
+        print("The hemoglobin value is low")
+        break
+
+    elif value>167:
+        print("The hemoglobin value is high")
+        break
+
+    else:
+        print("The hemoglobin value is normal")
+        break
