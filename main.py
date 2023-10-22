@@ -19,6 +19,7 @@ names_input = input("Enter your name(or an empty string to quit):")
 while names_input == "":
     break
 
+print(names)
 
 
 
