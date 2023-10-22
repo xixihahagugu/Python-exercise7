@@ -1,14 +1,8 @@
-year =input("enter a year:")
-x =int(year)
-if x%100 ==0:
-    if x%400 ==0:
-        print("The year is leap")
+n = 1
 
-    else:
-        print("The year is not leap")
-if x%100 !=0:
-    if x%4 ==0:
-            print("The year is leap")
-    else:
-        print("The year is not leap")
+while n <= 1000:
+    if n % 3 == 0:
+        print(n)
+
+    n += 1
 
