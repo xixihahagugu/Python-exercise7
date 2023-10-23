@@ -1,7 +1,5 @@
 # 7.2
-
-names = set()
-
+names=[]
 while True:
     names_input = input("Enter your name (or an empty string to quit): ")
 
@@ -12,7 +10,7 @@ while True:
         print("Existing name")
     else:
         print("New name")
-        names.add(names_input)
+    names.append(names_input)
 
 print(names)
 
